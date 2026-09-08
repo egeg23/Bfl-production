@@ -192,7 +192,7 @@
 
 Все источники — локальные файлы (снимок репозиториев 2026-09-05), интернет не использовался.
 
-- Контекст задачи: `/tmp/claude-0/-home-user/1700d6b8-0c7a-5ef0-980e-bbc162d00fee/scratchpad/context.md`, `.../scratchpad/vacancy.txt`
+- Контекст задачи: `<scratchpad>/context.md`, `.../scratchpad/vacancy.txt`
 - Целевой репо: `/home/user/bfl-production/README.md`, `/home/user/bfl-production/CLAUDE.md`, `/home/user/bfl-production/.gitignore`
 - Legal-v4: `/home/user/Legal-v4/app.py` (маршруты, OCR, фоновый поток, fallback-шаблоны), `/home/user/Legal-v4/kimi_api.py` (строка 24 — ключ; промпты; модель), `/home/user/Legal-v4/models.py`, `/home/user/Legal-v4/auth.py`, `/home/user/Legal-v4/payments.py`, `/home/user/Legal-v4/config.py`, `/home/user/Legal-v4/document_generator.py`, `/home/user/Legal-v4/preview_generator.py`, `/home/user/Legal-v4/public/admin.html` (вызовы `/api/admin/*`), `/home/user/Legal-v4/public/static/js/main.js` (дрейф маршрутов), `/home/user/Legal-v4/deploy/*`, `/home/user/Legal-v4/deploy.sh`, `/home/user/Legal-v4/nginx-config/maximov-tech.conf`, `/home/user/Legal-v4/docs/skolokovo/{business_plan,technical_description,checklist}.md`, `/home/user/Legal-v4/RULES.md`, `/home/user/Legal-v4/TARIFFS.md`, `/home/user/Legal-v4/templates/mock/mock_responses_kanevsky.json`, `/home/user/Legal-v4/templates/samples/*.txt`; `git ls-files` (`.env`, `uploads/` — 54 файла, `generated/` — 28 файлов отслеживаются); `git log` (30 коммитов, 2026-03-25)
 - Leg-ai / legal-ai-service: `/home/user/Leg-ai/kimi_api.py` (mock), `/home/user/Leg-ai/CODERABBIT_REVIEW.md`, `/home/user/Leg-ai/TARIFFS.md`, `/home/user/Leg-ai/requirements.txt`, `git log` (8 и 2 коммита); `md5sum`/`diff` общих файлов между тремя репо
