@@ -2,15 +2,17 @@
 
 Сводный список источников по всем исследовательским отчётам (`docs/research/`). Каждый факт и цифра в `docs/PLAN.md` опирается на один из этих отчётов; там же — даты публикаций и пометки «оценка»/«не найдено».
 
+Файл генерируется скриптом `scripts/build_sources.py` — не редактировать вручную.
+
 ## Отчёты исследования
 
-- [`01-company.md`](research/01-company.md) — Компания и работодатель: СРО «ПроРешения» и ГК «Правильный выбор»
-- [`02-regulation-process.md`](research/02-regulation-process.md) — Нормативная и процессная карта БФЛ (127-ФЗ, 2026)
-- [`03-market-competitors.md`](research/03-market-competitors.md) — Рынок БФЛ и конкуренты/аналоги модели
-- [`04-business-models.md`](research/04-business-models.md) — Бизнес-модель, монетизация, юнит-экономика, SLA, консорциум
-- [`05-user-assets.md`](research/05-user-assets.md) — Аудит наработок пользователя для цифрового контура
+- [`01-company.md`](research/01-company.md) — СРО «ПроРешения» и группа «Правильный выбор»: кто работодатель, что у них уже есть, в какой рынок заходит продукт
+- [`02-regulation-process.md`](research/02-regulation-process.md) — Нормативная и процессная карта БФЛ в РФ (состояние на сентябрь 2026)
+- [`03-market-competitors.md`](research/03-market-competitors.md) — Рынок БФЛ в РФ и конкуренты/аналоги модели «внешнее юридическое производство для юрфирм»
+- [`04-business-models.md`](research/04-business-models.md) — Бизнес-модель и экономика «контрактного юридического производства БФЛ»
+- [`05-user-assets.md`](research/05-user-assets.md) — Аудит наработок пользователя (egeg23) для цифрового контура продукта БФЛ
 
-## Компания и работодатель: СРО «ПроРешения» и ГК «Правильный выбор»
+## СРО «ПроРешения» и группа «Правильный выбор»: кто работодатель, что у них уже есть, в какой рынок заходит продукт
 (из `research/01-company.md`)
 
 1. Сайт СРО: https://sro-proresheniya.ru/ (главная; цифры 15 000+/1 200+/69/6 500+/89), реквизиты https://sro-proresheniya.ru/page/rekvizity, структура https://sro-proresheniya.ru/page/struktura-soyuza, компфонд и взносы https://sro-proresheniya.ru/page/kompensatsionny-fond (обновлено 20.01.2026), реестр АУ https://sro-proresheniya.ru/page/reestr-au (133 действующих, 4 исключённых; 08.09.2026), журнал изменений https://sro-proresheniya.ru/changelog, решения общего собрания https://sro-proresheniya.ru/page/15, решения Совета https://sro-proresheniya.ru/page/21, регистрационные документы https://sro-proresheniya.ru/page/20, дисциплинарный комитет https://sro-proresheniya.ru/page/25, проверки https://sro-proresheniya.ru/page/verifications, условия членства https://sro-proresheniya.ru/page/usloviya-chlenstva, контакты https://sro-proresheniya.ru/page/kontakty, профили членов https://sro-proresheniya.ru/aupro/59, /aupro/61, /aupro/72.
@@ -24,7 +26,7 @@
 9. Рынок и конкуренты: рейтинг «Ведомостей» 02.03.2026 https://www.vedomosti.ru/special/2026/03/02/reiting-kompanii-po-bankrotstvu-fizicheskih-lits-v-2026-godu-erid-2Vfnxxfepad; Газета.Ru 26.09.2025 https://www.gazeta.ru/business/2025/09/26/21764342.shtml; Рамблер/финансы (оценка 20–25 млрд ₽) https://finance.rambler.ru/money/51975051-rynok-bankrotstva-fizicheskih-lits-v-rf-tendentsii-i-perspektivy-razvitiya/; цены https://dolgam.net/articles/bankrotstvo-fizicheskih-lic/stoimost-procedury-bankrotstva-fizicheskogo-lica/; агентские программы https://partner.finzdorov.site/.
 10. Право: 127-ФЗ ст. 21–22 https://www.consultant.ru/document/cons_doc_LAW_39331/4238430ffd923f0889dd464ffbbf12d66d59ee71/; ст. 20.2 https://www.zakonrf.info/zakon-o-bankrotstve/20.2/; ст. 20.6 https://www.zakonrf.info/zakon-o-bankrotstve/20.6/; 315-ФЗ ст. 14 https://fzrf.su/zakon/o-samoreguliruemyh-organizaciyah-sro-315-fz/st-14.php и https://www.consultant.ru/document/cons_doc_LAW_72967/; реклама БФЛ с 01.01.2026 https://www.consultant.ru/legalnews/29175/; обзор ВС по участию АУ (11.10.2023) https://www.garant.ru/products/ipo/prime/doc/407706069/; обзор позиций ВС 2026 https://www.kachkin.ru/obzor-naibolee-znachimyh-pravovyh-poziczij-verhovnogo-suda-rf-v-sfere-bankrotstva-za-yanvar-mart-2026-g/; госпошлина https://fedelis.ru/article/gosposhlina-za-bankrotstvo/; Регистр АУ ФНС https://www.nalog.gov.ru/rn77/news/activities_fts/15606690/ и https://pravdaosro.ru/news/fns-rasschitala-reyting-dlya-52-sro-arbitr/; реестр СРО (50 организаций) https://www.all-sro.ru/register/sro_arbu/; надзор Росреестра https://rosreestr.gov.ru/activity/gosudarstvennyy-nadzor/kontrol-nadzor-za-deyatelnostyu-samoreguliruemykh-organizatsiy-arbitrazhnykh-upravlyayushchikh-/.
 
-## Нормативная и процессная карта БФЛ (127-ФЗ, 2026)
+## Нормативная и процессная карта БФЛ в РФ (состояние на сентябрь 2026)
 (из `research/02-regulation-process.md`)
 
 1. Федресурс. «Банкротства в России: 2025 год» (PDF, релиз, янв. 2026) — https://download.fedresurs.ru/news/Банкротство%20статрелиз%202025%20на%20сайт.pdf
@@ -71,7 +73,7 @@
 42. Официальное опубликование 253-ФЗ от 26.07.2026 — http://publication.pravo.gov.ru/document/0001202607260034
 43. Гарант, 05.01.2026. Банкротство-2026: новое в законодательстве (обзор; часть тезисов страницы противоречива, использована ограниченно) — https://www.garant.ru/ia/opinion/author/radzivil/1985668/
 
-## Рынок БФЛ и конкуренты/аналоги модели
+## Рынок БФЛ в РФ и конкуренты/аналоги модели «внешнее юридическое производство для юрфирм»
 (из `research/03-market-competitors.md`)
 
 - [S1] Федресурс. Банкротства в России: итоги 2021 года (статрелиз, PDF) — https://download.fedresurs.ru/news/Банкротство%20статрелиз%202021.pdf (янв. 2022)
@@ -143,7 +145,7 @@
 - [S67] fcbg.ru. «Как юристы обманывают с банкротством физлиц» — https://fcbg.ru/kak-obmanyvayut-s-bankrotstvom-fizicheskih-lic ; Igumnov Group — https://igumnov.group/lichnoe-bankrotstvo-kak-yuristy-obmanyvayut-fizlic/
 - [S68] АиФ. «Риски банкротства. За мошенничество с долгами грозит уголовная ответственность» — https://aif.ru/society/law/ugolovnyy-risk-sudy-nachali-chashche-nakazyvat-za-obman-pri-bankrotstve ; Ветров и партнёры — https://vitvet.com/articles/moshennichestvo/sudebnaya-praktika/moshennichestvo-pri-bankrotstve/ (2026)
 
-## Бизнес-модель, монетизация, юнит-экономика, SLA, консорциум
+## Бизнес-модель и экономика «контрактного юридического производства БФЛ»
 (из `research/04-business-models.md`)
 
 1. Федресурс, «Банкротства в России: 2025 год» (PDF, статрелиз), 28.01.2026 — https://download.fedresurs.ru/news/Банкротство статрелиз 2025 на сайт.pdf
@@ -187,7 +189,7 @@
 39. partner.mirbezdolgov.ru, «CRM для банкротства физлиц: как выбрать» (1–5 тыс. ₽/мес) — https://partner.mirbezdolgov.ru/crm-dlya-bankrotstva-fizlits-kak-vybrat/
 40. fcbg.ru, «Стоимость банкротства физ. лиц в 2026» (ориентиры стоимости ФУ 50–100 тыс.) — https://fcbg.ru/stoimost-bankrotstva-fizicheskih-lits
 
-## Аудит наработок пользователя для цифрового контура
+## Аудит наработок пользователя (egeg23) для цифрового контура продукта БФЛ
 (из `research/05-user-assets.md`)
 
 Все источники — локальные файлы (снимок репозиториев 2026-09-05), интернет не использовался.
