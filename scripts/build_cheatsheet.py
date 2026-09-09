@@ -18,48 +18,48 @@ MD = ROOT / "docs" / "CHEATSHEET.md"
 
 CSS = """
 @page {
-  size: A4; margin: 14mm 13mm 16mm 13mm;
+  size: A4; margin: 12mm 12mm 14mm 12mm;
   @bottom-center { content: counter(page) " / " counter(pages);
-    font-family: "DejaVu Sans"; font-size: 8pt; color: #8a8f98; }
+    font-family: "DejaVu Sans"; font-size: 7.5pt; color: #8a8f98; }
 }
 * { box-sizing: border-box; }
-body { font-family: "DejaVu Sans", sans-serif; font-size: 9.6pt; line-height: 1.45;
+body { font-family: "DejaVu Sans", sans-serif; font-size: 9pt; line-height: 1.36;
        color: #16181d; margin: 0; }
-h1 { font-size: 20pt; margin: 0 0 2mm; letter-spacing: -0.3pt; }
-.lede { color: #4a5058; font-size: 9pt; margin: 0 0 5mm; }
-.cover-box { border: 1.2pt solid #16181d; padding: 4mm; margin: 0 0 5mm; }
-.cover-box h2 { margin: 0 0 2mm; font-size: 11pt; }
-.block { break-inside: avoid-page; margin: 0 0 6mm; }
-.block-head { display: flex; align-items: baseline; gap: 3mm;
-  border-bottom: 1.6pt solid #16181d; padding-bottom: 1.6mm; margin-bottom: 2.6mm; }
-.num { font-size: 15pt; font-weight: bold; min-width: 9mm; }
-.btitle { font-size: 13pt; font-weight: bold; flex: 1; letter-spacing: -0.2pt; }
-.time { font-size: 8pt; color: #4a5058; white-space: nowrap; }
-.flag { background: #f2f2f0; border-left: 2.5pt solid #16181d; padding: 1.8mm 2.5mm;
-  font-size: 8.6pt; margin: 0 0 2.5mm; }
-.say { margin: 0 0 2.5mm; }
-.say p { margin: 0 0 1.6mm; padding-left: 4.5mm; text-indent: -4.5mm; }
+h1 { font-size: 18pt; margin: 0 0 2mm; letter-spacing: -0.3pt; }
+h2.part { font-size: 13pt; margin: 0 0 3mm; padding-bottom: 1.5mm;
+  border-bottom: 2pt solid #16181d; letter-spacing: -0.2pt; }
+.lede { color: #4a5058; font-size: 8.6pt; margin: 0 0 4mm; }
+.cover-box { border: 1pt solid #16181d; padding: 3mm; margin: 0 0 4mm; }
+.cover-box h3 { margin: 0 0 1.5mm; font-size: 10pt; }
+.map td { font-size: 8.4pt; }
+.block { margin: 0 0 4mm; }
+.block-head { display: flex; align-items: baseline; gap: 2.5mm;
+  border-bottom: 1.2pt solid #16181d; padding-bottom: 1.2mm; margin-bottom: 2mm; }
+.num { font-size: 12pt; font-weight: bold; min-width: 7mm; }
+.btitle { font-size: 11pt; font-weight: bold; flex: 1; letter-spacing: -0.2pt; }
+.time { font-size: 7.6pt; color: #4a5058; white-space: nowrap; }
+.flag { background: #f2f2f0; border-left: 2pt solid #16181d; padding: 1.4mm 2mm;
+  font-size: 8.2pt; margin: 0 0 2mm; }
+.say { margin: 0 0 1.8mm; }
+.say p { margin: 0 0 1.2mm; padding-left: 4mm; text-indent: -4mm; break-inside: avoid; }
 .say p::before { content: "▸ "; color: #6b7280; }
-.chips { margin: 0 0 2.5mm; font-size: 8.4pt; color: #16181d; }
+.chips { margin: 0 0 2mm; font-size: 8pt; }
 .chip { display: inline-block; border: 0.6pt solid #b9bec6; border-radius: 2pt;
-  padding: 0.6mm 1.6mm; margin: 0 1.6mm 1.2mm 0; }
-.qa { border-top: 0.6pt dotted #b9bec6; padding-top: 2mm; }
-.qa-h { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.6pt;
-  color: #6b7280; margin: 0 0 1.8mm; }
-.q { break-inside: avoid; margin: 0 0 2.6mm; }
-.q .qq { font-weight: bold; font-size: 9.4pt; margin: 0 0 0.8mm; }
-.q .qa-txt { margin: 0 0 0.8mm; }
-.q .meta { font-size: 8.2pt; color: #4a5058; }
+  padding: 0.4mm 1.4mm; margin: 0 1.4mm 1mm 0; }
+.qa-h { font-size: 7.6pt; text-transform: uppercase; letter-spacing: 0.5pt;
+  color: #6b7280; margin: 0 0 1.5mm; }
+.q { break-inside: avoid; margin: 0 0 2.2mm; }
+.q .qq { font-weight: bold; font-size: 9pt; margin: 0 0 0.6mm; }
+.q .qa-txt { margin: 0 0 0.6mm; font-size: 8.8pt; }
+.q .meta { font-size: 7.8pt; color: #4a5058; }
 .q .meta b { color: #16181d; }
-.two-col { column-count: 2; column-gap: 7mm; }
-.two-col li { break-inside: avoid; }
-ul.tight { margin: 0 0 3mm; padding-left: 5mm; }
-ul.tight li { margin: 0 0 1.2mm; }
+.two-col { column-count: 2; column-gap: 6mm; }
+ul.tight { margin: 0 0 3mm; padding-left: 4.5mm; }
+ul.tight li { margin: 0 0 1mm; break-inside: avoid; }
 .pagebreak { break-before: page; }
-table { width: 100%; border-collapse: collapse; font-size: 8.8pt; margin: 0 0 4mm; }
-th, td { border: 0.6pt solid #b9bec6; padding: 1.4mm 2mm; text-align: left; vertical-align: top; }
-th { background: #f2f2f0; font-size: 8.4pt; }
-.footer-note { font-size: 8pt; color: #6b7280; margin-top: 4mm; }
+table { width: 100%; border-collapse: collapse; font-size: 8.4pt; margin: 0 0 3mm; }
+th, td { border: 0.6pt solid #b9bec6; padding: 1.1mm 1.6mm; text-align: left; vertical-align: top; }
+th { background: #f2f2f0; font-size: 8pt; }
 """
 
 
@@ -67,12 +67,15 @@ def esc(s):
     return html.escape(str(s))
 
 
-def render_block(b, qa_items):
-    out = ['<section class="block">']
-    out.append('<div class="block-head">'
-               f'<span class="num">{esc(b["n"])}</span>'
-               f'<span class="btitle">{esc(b["title"])}</span>'
-               f'<span class="time">{esc(b.get("time", ""))}</span></div>')
+def head(b):
+    return ('<div class="block-head">'
+            f'<span class="num">{esc(b["n"])}</span>'
+            f'<span class="btitle">{esc(b["title"])}</span>'
+            f'<span class="time">{esc(b.get("time", ""))}</span></div>')
+
+
+def render_script(b):
+    out = ['<section class="block">', head(b)]
     if b.get("flag"):
         out.append(f'<div class="flag">{esc(b["flag"])}</div>')
     out.append('<div class="say">')
@@ -83,20 +86,26 @@ def render_block(b, qa_items):
         out.append('<div class="chips">'
                    + "".join(f'<span class="chip">{esc(n)}</span>' for n in b["numbers"])
                    + "</div>")
-    if qa_items:
-        out.append('<div class="qa"><div class="qa-h">Спросят — отвечаю</div>')
-        for q in qa_items:
-            out.append('<div class="q">')
-            out.append(f'<div class="qq">В: {esc(q["question"])}</div>')
-            out.append(f'<div class="qa-txt">О: {esc(q["answer"])}</div>')
-            bits = []
-            if q.get("numbers"):
-                bits.append("<b>Цифры:</b> " + esc("; ".join(q["numbers"])))
-            if q.get("trap"):
-                bits.append("<b>Не говорить:</b> " + esc(q["trap"]))
-            if bits:
-                out.append('<div class="meta">' + " &nbsp;·&nbsp; ".join(bits) + "</div>")
-            out.append("</div>")
+    out.append("</section>")
+    return "\n".join(out)
+
+
+def render_qa(b, qa_items):
+    if not qa_items:
+        return ""
+    out = ['<section class="block">', head(b),
+           '<div class="qa-h">Спросят — отвечаю</div>']
+    for q in qa_items:
+        out.append('<div class="q">')
+        out.append(f'<div class="qq">В: {esc(q["question"])}</div>')
+        out.append(f'<div class="qa-txt">О: {esc(q["answer"])}</div>')
+        bits = []
+        if q.get("numbers"):
+            bits.append("<b>Цифры:</b> " + esc("; ".join(q["numbers"])))
+        if q.get("trap"):
+            bits.append("<b>Не говорить:</b> " + esc(q["trap"]))
+        if bits:
+            out.append('<div class="meta">' + " &nbsp;·&nbsp; ".join(bits) + "</div>")
         out.append("</div>")
     out.append("</section>")
     return "\n".join(out)
@@ -112,30 +121,45 @@ def build():
 
     parts = [
         "<h1>Собеседование: контрактное юридическое производство БФЛ</h1>",
-        '<p class="lede">Шпаргалка для устного разговора. Слева номер блока, справа — сколько он звучит. '
-        'Каждая строка со стрелкой — одна произнесённая мысль. Под блоком — вопросы, которые последуют, '
-        "и готовые ответы. Все цифры — оценки из плана версии 1.1, проверяются в первые 30 дней.</p>",
+        '<p class="lede">Часть I — что говорю, по блокам. Каждая строка со стрелкой — одна '
+        'произнесённая мысль. Часть II — вопросы, которые последуют, и готовые ответы; её не '
+        'читают вслух, в неё заглядывают. Все цифры — оценки из плана версии 1.1, '
+        "проверяются в первые 30 дней.</p>",
     ]
     if qa.get("opening"):
-        parts.append('<div class="cover-box"><h2>Держать в голове весь разговор</h2>'
+        parts.append('<div class="cover-box"><h3>Держать в голове весь разговор</h3>'
                      + "<ul class='tight'>"
                      + "".join(f"<li>{esc(x)}</li>" for x in qa["opening"])
                      + "</ul></div>")
+    rows = "".join(
+        f'<tr><td>{esc(b["n"])}</td><td>{esc(b["title"])}</td><td>{esc(b.get("time",""))}</td>'
+        f'<td>{len(by_block.get(b["n"], []))}</td></tr>' for b in blocks)
+    parts.append('<table class="map"><tr><th>№</th><th>Блок</th><th>Время</th>'
+                 f'<th>Вопросов</th></tr>{rows}</table>')
+
+    parts.append('<section class="pagebreak"><h2 class="part">Часть I. Что говорю</h2></section>')
     for b in blocks:
-        parts.append(render_block(b, by_block.get(b["n"], [])))
+        parts.append(render_script(b))
+
+    parts.append('<section class="pagebreak"><h2 class="part">Часть II. Спросят — отвечаю</h2></section>')
+    for b in blocks:
+        parts.append(render_qa(b, by_block.get(b["n"], [])))
+    stress = by_block.get("stress", [])
+    if stress:
+        parts.append(render_qa({"n": "S", "title": "Стресс-вопросы", "time": ""}, stress))
 
     if qa.get("must_know_numbers"):
-        parts.append('<section class="pagebreak"><h1>Цифры наизусть</h1>'
+        parts.append('<section class="pagebreak"><h2 class="part">Цифры наизусть</h2>'
                      '<ul class="tight two-col">'
                      + "".join(f"<li>{esc(x)}</li>" for x in qa["must_know_numbers"])
                      + "</ul></section>")
     if qa.get("killer_questions"):
-        parts.append('<section><div class="block-head"><span class="btitle">Опасные вопросы</span></div>'
+        parts.append('<section><h2 class="part">Опасные вопросы</h2>'
                      '<ul class="tight">'
                      + "".join(f"<li>{esc(x)}</li>" for x in qa["killer_questions"])
                      + "</ul></section>")
     if qa.get("never_say"):
-        parts.append('<section><div class="block-head"><span class="btitle">Не говорить никогда</span></div>'
+        parts.append('<section><h2 class="part">Не говорить никогда</h2>'
                      '<ul class="tight">'
                      + "".join(f"<li>{esc(x)}</li>" for x in qa["never_say"])
                      + "</ul></section>")

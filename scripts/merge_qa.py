@@ -30,6 +30,14 @@ BLOCK_MAP = {
     "Каверзные/стресс": "stress",
 }
 RISK_ORDER = {"high": 0, "medium": 1, "low": 2}
+
+# keyword router: some questions belong to a block the persona label does not name
+KEYWORDS = (
+    ("7", r"конфигурац|гибрид|регионал|сет[ьи] исполнител|аутсорс модел|централизов|вариант [абв]\b"),
+    ("10", r"риск|жалоб|отзыв|утечк|фас\b|роспотреб|репутац|скандал|штраф за реклам|проверк"),
+    ("12", r"что вам нужно от нас|какие вопросы|полномочи|бюджет|спонсор|кто принимает решени"),
+    ("2", r"что мы продаём|зачем партнёру|почему отдаст|ценност|конкурент|франшиз"),
+)
 STOP = set("и в во не что он на я с со как а то все она так его но да ты к у же вы за бы по "
            "её мне было вот от меня ещё нет о из ему теперь когда даже ну вдруг ли если или "
            "быть был вам чтобы это этот эта эти для при над под про мы вас наш ваш то есть".split())
@@ -67,6 +75,7 @@ def main():
             it["answer"] = fix
             it["fixed"] = True
         it["block_n"] = BLOCK_MAP.get(it.get("block", ""), "stress")
+        it["_alt"] = [b for b, pat in KEYWORDS if re.search(pat, it["question"].lower())]
         it["_k"] = norm(it["question"])
         items.append(it)
 
@@ -78,15 +87,31 @@ def main():
         kept.append(it)
     dropped_dup = len(items) - len(kept)
 
-    per_block, final = {}, []
+    per_block, final, overflow = {}, [], []
     for it in kept:
         b = it["block_n"]
         limit = 10 if b == "stress" else cap
         if per_block.get(b, 0) >= limit:
+            overflow.append(it)
             continue
         per_block[b] = per_block.get(b, 0) + 1
         it.pop("_k", None)
         final.append(it)
+
+    # fill thin blocks from the overflow using the keyword router
+    moved = 0
+    for it in overflow:
+        for b in it.get("_alt", []):
+            if per_block.get(b, 0) < cap:
+                it["block_n"] = b
+                per_block[b] = per_block.get(b, 0) + 1
+                it.pop("_k", None)
+                it.pop("_alt", None)
+                final.append(it)
+                moved += 1
+                break
+    for it in final:
+        it.pop("_alt", None)
 
     # keep the numbered blocks in reading order, stress section last
     order = {str(n): n for n in range(1, 14)}
@@ -101,7 +126,7 @@ def main():
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"вошло {len(final)} из {len(raw['items'])} (дублей снято {dropped_dup}); "
           f"по блокам {dict(sorted(per_block.items(), key=lambda kv: order.get(kv[0], 99)))}; "
-          f"правок фактчека применено {sum(1 for i in final if i.get('fixed'))}")
+          f"перенесено по ключевым словам {moved}")
 
 
 if __name__ == "__main__":
