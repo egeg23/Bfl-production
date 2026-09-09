@@ -11,6 +11,8 @@
 - [`03-market-competitors.md`](research/03-market-competitors.md) — Рынок БФЛ в РФ и конкуренты/аналоги модели «внешнее юридическое производство для юрфирм»
 - [`04-business-models.md`](research/04-business-models.md) — Бизнес-модель и экономика «контрактного юридического производства БФЛ»
 - [`05-user-assets.md`](research/05-user-assets.md) — Аудит наработок пользователя (egeg23) для цифрового контура продукта БФЛ
+- [`06-integrations.md`](research/06-integrations.md) — 06. Карта интеграций и источников данных цифрового контура
+- [`07-hiring-lens.md`](research/07-hiring-lens.md) — Исследование 07. Рынок труда и мотивация: роль «Руководитель продукта / CEO направления» и команда производства БФЛ
 
 ## СРО «ПроРешения» и группа «Правильный выбор»: кто работодатель, что у них уже есть, в какой рынок заходит продукт
 (из `research/01-company.md`)
@@ -195,17 +197,127 @@
 Все источники — локальные файлы (снимок репозиториев 2026-09-05), интернет не использовался.
 
 - Контекст задачи: `<scratchpad>/context.md`, `.../scratchpad/vacancy.txt`
-- Целевой репо: `/home/user/bfl-production/README.md`, `/home/user/bfl-production/CLAUDE.md`, `/home/user/bfl-production/.gitignore`
-- Legal-v4: `/home/user/Legal-v4/app.py` (маршруты, OCR, фоновый поток, fallback-шаблоны), `/home/user/Legal-v4/kimi_api.py` (строка 24 — ключ; промпты; модель), `/home/user/Legal-v4/models.py`, `/home/user/Legal-v4/auth.py`, `/home/user/Legal-v4/payments.py`, `/home/user/Legal-v4/config.py`, `/home/user/Legal-v4/document_generator.py`, `/home/user/Legal-v4/preview_generator.py`, `/home/user/Legal-v4/public/admin.html` (вызовы `/api/admin/*`), `/home/user/Legal-v4/public/static/js/main.js` (дрейф маршрутов), `/home/user/Legal-v4/deploy/*`, `/home/user/Legal-v4/deploy.sh`, `/home/user/Legal-v4/nginx-config/maximov-tech.conf`, `/home/user/Legal-v4/docs/skolokovo/{business_plan,technical_description,checklist}.md`, `/home/user/Legal-v4/RULES.md`, `/home/user/Legal-v4/TARIFFS.md`, `/home/user/Legal-v4/templates/mock/mock_responses_kanevsky.json`, `/home/user/Legal-v4/templates/samples/*.txt`; `git ls-files` (`.env`, `uploads/` — 54 файла, `generated/` — 28 файлов отслеживаются); `git log` (30 коммитов, 2026-03-25)
-- Leg-ai / legal-ai-service: `/home/user/Leg-ai/kimi_api.py` (mock), `/home/user/Leg-ai/CODERABBIT_REVIEW.md`, `/home/user/Leg-ai/TARIFFS.md`, `/home/user/Leg-ai/requirements.txt`, `git log` (8 и 2 коммита); `md5sum`/`diff` общих файлов между тремя репо
-- legal-ai-simple: `/home/user/legal-ai-simple/README.md`, `/home/user/legal-ai-simple/prompts/legal_prompts.md`, `git log` (15 коммитов, авторы egeg23 / Kimi Claw)
+- Целевой репо: `~/bfl-production/README.md`, `~/bfl-production/CLAUDE.md`, `~/bfl-production/.gitignore`
+- Legal-v4: `~/Legal-v4/app.py` (маршруты, OCR, фоновый поток, fallback-шаблоны), `~/Legal-v4/kimi_api.py` (строка 24 — ключ; промпты; модель), `~/Legal-v4/models.py`, `~/Legal-v4/auth.py`, `~/Legal-v4/payments.py`, `~/Legal-v4/config.py`, `~/Legal-v4/document_generator.py`, `~/Legal-v4/preview_generator.py`, `~/Legal-v4/public/admin.html` (вызовы `/api/admin/*`), `~/Legal-v4/public/static/js/main.js` (дрейф маршрутов), `~/Legal-v4/deploy/*`, `~/Legal-v4/deploy.sh`, `~/Legal-v4/nginx-config/maximov-tech.conf`, `~/Legal-v4/docs/skolokovo/{business_plan,technical_description,checklist}.md`, `~/Legal-v4/RULES.md`, `~/Legal-v4/TARIFFS.md`, `~/Legal-v4/templates/mock/mock_responses_kanevsky.json`, `~/Legal-v4/templates/samples/*.txt`; `git ls-files` (`.env`, `uploads/` — 54 файла, `generated/` — 28 файлов отслеживаются); `git log` (30 коммитов, 2026-03-25)
+- Leg-ai / legal-ai-service: `~/Leg-ai/kimi_api.py` (mock), `~/Leg-ai/CODERABBIT_REVIEW.md`, `~/Leg-ai/TARIFFS.md`, `~/Leg-ai/requirements.txt`, `git log` (8 и 2 коммита); `md5sum`/`diff` общих файлов между тремя репо
+- legal-ai-simple: `~/legal-ai-simple/README.md`, `~/legal-ai-simple/prompts/legal_prompts.md`, `git log` (15 коммитов, авторы egeg23 / Kimi Claw)
 - Поиск тестов: `find … -iname '*test*'` по четырём Legal-репо — пусто; поиск БФЛ-терминов (`банкрот|127-ФЗ|финансовый управляющий|ЕФРСБ`) по всем репо — совпадений в коде пользователя нет (только оферта FlyMart и общие фразы в промптах)
-- seller-ai: `/home/user/seller-ai/README.md`, `/home/user/seller-ai/CLAUDE.md`, `/home/user/seller-ai/memory/MEMORY.md`, `/home/user/seller-ai/HANDOFF.md` (шапка), `/home/user/seller-ai/INTEGRITY_AUDIT.md`, `/home/user/seller-ai/api/routers/auth.py`, `/home/user/seller-ai/api/auth_codes.py`, `/home/user/seller-ai/api/billing/plans.py`, `/home/user/seller-ai/api/billing/service.py`, `/home/user/seller-ai/api/llm/`, `/home/user/seller-ai/api/content/ocr.py`, `/home/user/seller-ai/api/rag/`, `/home/user/seller-ai/tests/` (90 файлов), `/home/user/seller-ai/alembic/versions/` (60), `/home/user/seller-ai/ops/`, `/home/user/seller-ai/docs/`, `/home/user/seller-ai/frontend/src/lib/i18n.tsx`
-- Profi_UZ: `/home/user/Profi_UZ/README.md`, `/home/user/Profi_UZ/DEPLOY.md`, `/home/user/Profi_UZ/CLAUDE.md`, `/home/user/Profi_UZ/MVP_PLAN.md`, `/home/user/Profi_UZ/supabase/migrations/` (36 файлов; `grep -c 'create policy'` → 44), `/home/user/Profi_UZ/supabase/functions/{auth-bridge,notify,tg-webhook}`, `/home/user/Profi_UZ/.github/workflows/{deploy-vps,deploy-supabase,vps-run}.yml`, `git log` (91 коммит)
-- FlatAi: `/home/user/FlatAi/README.md`, `/home/user/FlatAi/backend/app/{security.py,api/auth.py,services/notifications.py,integrations/telegram_gateway.py,scheduler.py,crypto.py,ratelimit.py,url_safety.py,entitlements.py}`, `/home/user/FlatAi/backend/tests/` (19 файлов), `/home/user/FlatAi/backend/pytest.ini`, `/home/user/FlatAi/.github/workflows/ci.yml`, `/home/user/FlatAi/deploy/`, `/home/user/FlatAi/docs/` (SECURITY-AUDIT, GO-LIVE, ESIGN-PLAN, HANDOFF-SAAS), `/home/user/FlatAi/backend/requirements.txt`, `git log` (54 коммита, до 2026-08-18)
-- tezketkaz: `/home/user/tezketkaz/README.md`, `/home/user/tezketkaz/pubspec.yaml`, `/home/user/tezketkaz/backend/src/{lib/audit.js,lib/jwt.js,routes/integration.js,middleware/auth.js}`, `/home/user/tezketkaz/backend/prisma/migrations/`, `/home/user/tezketkaz/LAUNCH_CHECKLIST.md`
-- FlyMart: `/home/user/FlyMart/README.md`, `/home/user/FlyMart/_ANALYSIS/{FLYMART-ARCHITECTURE,FLYMART-AUDIT-AND-PLAN}.md`
-- DevUZ-perfect-: `/home/user/DevUZ-perfect-/README.md`, `/home/user/DevUZ-perfect-/package.json`, `/home/user/DevUZ-perfect-/middleware.ts`, `/home/user/DevUZ-perfect-/lib/qualify/`, `/home/user/DevUZ-perfect-/supabase/migrations/`
-- Global-Export: `/home/user/Global-Export/README.md`, `/home/user/Global-Export/package.json`, `/home/user/Global-Export/proxy.ts`, `/home/user/Global-Export/app/admin/(panel)/`
+- seller-ai: `~/seller-ai/README.md`, `~/seller-ai/CLAUDE.md`, `~/seller-ai/memory/MEMORY.md`, `~/seller-ai/HANDOFF.md` (шапка), `~/seller-ai/INTEGRITY_AUDIT.md`, `~/seller-ai/api/routers/auth.py`, `~/seller-ai/api/auth_codes.py`, `~/seller-ai/api/billing/plans.py`, `~/seller-ai/api/billing/service.py`, `~/seller-ai/api/llm/`, `~/seller-ai/api/content/ocr.py`, `~/seller-ai/api/rag/`, `~/seller-ai/tests/` (90 файлов), `~/seller-ai/alembic/versions/` (60), `~/seller-ai/ops/`, `~/seller-ai/docs/`, `~/seller-ai/frontend/src/lib/i18n.tsx`
+- Profi_UZ: `~/Profi_UZ/README.md`, `~/Profi_UZ/DEPLOY.md`, `~/Profi_UZ/CLAUDE.md`, `~/Profi_UZ/MVP_PLAN.md`, `~/Profi_UZ/supabase/migrations/` (36 файлов; `grep -c 'create policy'` → 44), `~/Profi_UZ/supabase/functions/{auth-bridge,notify,tg-webhook}`, `~/Profi_UZ/.github/workflows/{deploy-vps,deploy-supabase,vps-run}.yml`, `git log` (91 коммит)
+- FlatAi: `~/FlatAi/README.md`, `~/FlatAi/backend/app/{security.py,api/auth.py,services/notifications.py,integrations/telegram_gateway.py,scheduler.py,crypto.py,ratelimit.py,url_safety.py,entitlements.py}`, `~/FlatAi/backend/tests/` (19 файлов), `~/FlatAi/backend/pytest.ini`, `~/FlatAi/.github/workflows/ci.yml`, `~/FlatAi/deploy/`, `~/FlatAi/docs/` (SECURITY-AUDIT, GO-LIVE, ESIGN-PLAN, HANDOFF-SAAS), `~/FlatAi/backend/requirements.txt`, `git log` (54 коммита, до 2026-08-18)
+- tezketkaz: `~/tezketkaz/README.md`, `~/tezketkaz/pubspec.yaml`, `~/tezketkaz/backend/src/{lib/audit.js,lib/jwt.js,routes/integration.js,middleware/auth.js}`, `~/tezketkaz/backend/prisma/migrations/`, `~/tezketkaz/LAUNCH_CHECKLIST.md`
+- FlyMart: `~/FlyMart/README.md`, `~/FlyMart/_ANALYSIS/{FLYMART-ARCHITECTURE,FLYMART-AUDIT-AND-PLAN}.md`
+- DevUZ-perfect-: `~/DevUZ-perfect-/README.md`, `~/DevUZ-perfect-/package.json`, `~/DevUZ-perfect-/middleware.ts`, `~/DevUZ-perfect-/lib/qualify/`, `~/DevUZ-perfect-/supabase/migrations/`
+- Global-Export: `~/Global-Export/README.md`, `~/Global-Export/package.json`, `~/Global-Export/proxy.ts`, `~/Global-Export/app/admin/(panel)/`
 - Нормативные ссылки в тексте (127-ФЗ ст. 213.4; приказ Минэкономразвития № 530 от 05.08.2015; 152-ФЗ ст. 18 ч. 5) приведены по памяти без проверки в интернете — **требуют верификации юристом** перед включением в план.
+
+## 06. Карта интеграций и источников данных цифрового контура
+(из `research/06-integrations.md`)
+
+1. ПравоДела — тарифы, функции — https://pravo.tech/product/dela (2026)
+2. Casebook — цены — https://picktech.ru/product/casebook-1/ (2026); https://www.kaluga-poisk.ru/news/novosti-kompanii/tsena-servisov-proverki-kontragentov-2026-bolshoy-obzor-tarifov-i-vozmozhnostey-podpiski (2026)
+3. API Casebook 3.0 — https://apiportal.ru/catalog/api-casebook/ (24.10.2024)
+4. Хабр. kad.arbitr.ru снова поддаётся парсингу — https://habr.com/ru/articles/1029384/ (2025)
+5. parser-api.com — API kad.arbitr.ru — https://www.parser-api.com/kad-arbitr-ru
+6. you-right.ru — единый API, тарифы — https://you-right.ru/api-efrsb
+7. «Мой арбитр»: ЕСИА, представители, УКЭП — https://vitvet.com/articles/sudebnaya_praktika_i_spory/instrukciya_po_ispolzovaniyu_servisa_moj_arbitr/ ; https://gogov.ru/login/my-arbitr ; https://kredita.net/spravochnik/moy-arbitr-bankrotstvo-fizicheskikh-lits/ (2025–2026)
+8. Приказ Судебного департамента № 252 от 28.12.2016 — https://20aas.arbitr.ru/process/pravosudie
+9. ПравоТех — разработчик КАД и «Мой арбитр» — https://www.cnews.ru/book/ПравоТех_АО_-_Pravo_Tech_-_ранее_Право_ру_АО
+10. ГАС «Правосудие» — https://iitrust.ru/articles/elektronnoe-pravosudie-dlya-fizicheskih-lits-kak-distantsionno-obratitsya-i-predstavit-dokumenty-v-sudy-obshhey-urisdiktsii ; «Правосудие онлайн» — https://rvzrus.ru/blog/3027
+11. Федресурс. REST-сервис ЕФРСБ, спец. 1.3.0 — https://fedresurs.ru/helps/bankrupt/Service_rest_1.3.0.pdf (503 через прокси; по выдаче)
+12. Федресурс. Важная информация для подключения веб-сервиса — https://fedresurs.ru/helps/bankrupt/Важная информация для подключения веб-сервиса.pdf (503; по выдаче)
+13. Федресурс. Сервис передачи реестров, торгов, отчётов и сообщений, спец. 1.47 — https://fedresurs.ru/helps/bankrupt/Service_1.47.pdf (503; по выдаче)
+14. Федресурс. Об изменении платы за размещение сведений — https://fedresurs.ru/news/e627342e-8a16-4419-9b00-552de7f9e11f (дата не установлена)
+15. Хабр. Банкрот или не банкрот? (парсинг ЕФРСБ) — https://habr.com/ru/articles/659569/ (07.04.2022)
+16. api-assist — API ЕФРСБ — https://api-assist.com/api/bankrot-fedresurs (2026)
+17. Bankro.TECH API — https://bankro.tech/products/api-bankro-tech/ (403; по выдаче); описание — https://probankrotstvo.ru/tools/sistema-avtomatizacii-procedur-bankrotstva-28
+18. Письмо ФССП от 22.04.2022 № 00111/22/86665 — https://www.consultant.ru/document/cons_doc_LAW_416764/
+19. Клиент API БДИП ФССП (README о закрытии, лимиты) — https://github.com/NovikovRoman/fssp (архив 13.12.2023)
+20. Описание API БДИП — https://api-ip.fssp.gov.ru/about (HTTP 410 на 08.09.2026)
+21. NTA. API и ФССП: как это работает — https://vc.ru/newtechaudit/397375-api-i-fssp-kak-eto-rabotaet (07.04.2022)
+22. Ограничение обращений в ФССП с 24.02.2025 — https://rvzrus.ru/blog/2964 (28.02.2025)
+23. Подключение к ФССП через СМЭВ — https://agredator.ru/fssp
+24. api-parser.ru — API ФССП — https://api-parser.ru/fssprus-ru (© 2022)
+25. ЕСИА: регламент, стоимость, сроки (вендор) — https://esia.ru/reglament_esia (03.2026); переход на типовое решение до 31.12.2026 — https://iitrust.ru/news/s-2027-goda-vse-organizatsii-rabotaiushchie-s-esia-obiazany-pereiti-na-tipovoe-integratsionnoe-reshenie-2026-06-04
+26. Авторизация через Госуслуги для бизнеса — https://www.mcart.ru/blogs/podklyuchenie-avtorizatsii-cherez-gosuslugi-rukovodstvo-po-esia-dlya-biznesa/ (10.10.2025)
+27. Цифровой профиль — https://esia.ru/dp ; https://www.tadviser.ru/index.php/Статья:Цифровой_профиль_гражданина_РФ
+28. Цифровой профиль: СМЭВ с 02.02.2026, тарифы ПП № 1687 — https://iitrust.ru/news/perehod-na-smev-s-fevralya-2026-goda-novyy-poryadok-tarifikatsii-dannyh-tsifrovogo-profilya-2025-12-18 (18.12.2025)
+29. Госключ — https://goskey.ru/ ; для бизнеса с июля 2025 — https://partner.market.yandex.ru/chtojournal/kak-polzovatsya-gosklyuch/ (2026)
+30. Госключ в API Диадока — https://www.diadoc.ru/articles/86081-gosklyuch_v_api_diadoka ; https://diadoc.com/blog/gosklyuch-v-api-diadoka-besplatnoe-podpisanie-dokumentov-fizlitsami
+31. МЧД 2026 — https://astral.ru/aj/elem/obyazatelnye-svedeniya-dlya-mchd-chto-izmenitsya-dlya-biznesa/
+32. Документы для банкротства гражданина — https://www.dvitex.ru/poleznoe/bankrotstvo-fizicheskikh-lits/dokumenty-dlya-priznaniya-bankrotom-fizicheskogo-litsa/ (15.08.2026)
+33. ЕГРН с 01.03.2023 — https://realty.rbc.ru/news/644698d09a7947070321593f ; https://t-j.ru/news/egrn-top-secret/
+34. НБКИ для бизнеса — https://corp.nbki.ru/ ; отчёт гражданину — https://nbki.ru/nbki-history/kreditnyj-otchet/ ; юрлицам — https://nbki.ru/judicial/
+35. ОКБ «Скоринг Бюро» — https://scores.bki-okb.ru/
+36. Открытые API ЦБ: перенос сроков — https://rtln.ru/blog/otkrytye-api-banka-rossii-itogi-2025-goda-novye-sroki-obnovlenie-standartov/ ; https://bosfera.ru/press-release/bank-rossii-perenes-sroki-obyazatelnogo-vnedreniya-open-api ; https://www.cbr.ru/press/event/?id=28214
+37. ЮKassa — сплитование — https://yookassa.ru/recipes/pro-yookassa/splitovanie-platezhey/ (25.12.2025); Безопасная сделка — https://yookassa.ru/secure-deal/
+38. Т-Банк «Мультирасчёты» — https://www.tbank.ru/business/online-payments/multi-calculation-service/ ; прекращение «Сплитования» с 01.10.2026 — https://www.tbank.ru/business/help/business-payments/internet-acquiring/splitting/ ; номинальные счета (API) — https://developer.tbank.ru/docs/products/nominal ; Точка — https://tochka.com/rko/nominal-payments/
+39. Контур.Сайн — тарифы — https://kontur.ru/sign/price
+40. Диадок — тарифы — https://kontur.ru/diadoc/price ; https://www.diadoc.ru/price (403; по выдаче)
+41. Почта России — API — https://www.pochta.ru/support/business/api ; лимиты — https://docs.apiship.ru/docs/delivery-services/list-delivery-services/rupost/
+42. СДЭК/Boxberry — API — https://hrustalev.com/news/razvitie-biznesa/sdek-vs-pochta-rossii-vs-boxberry-chestnoe-sravnenie-dlya-internet-magazina/ ; https://smart-engine.ru/docs/dokumentatsiya/storonnie-servisi/boxberry
+43. Реестр доверенностей ФНП — https://www.reestr-dover.ru/ ; https://gosproverki.ru/service/reestr-dover
+44. Битрикс24 — лимиты REST — https://apidocs.bitrix24.ru/limits.html ; вебхуки — https://delomatika.ru/blog/webhooks-bitriks24/
+45. amoCRM — лимиты — https://github.com/amocrm/amocrm-api-php/issues/318 ; https://avodigital.ru/blog/integratsiya-amocrm-s-saytom/
+46. ПАУ — тарифы — https://russianit.ru/products/pau/price ; функции — https://support.russianit.ru/books/pomoshhnik-arbitraznogo-upravlyayushhego
+
+## Исследование 07. Рынок труда и мотивация: роль «Руководитель продукта / CEO направления» и команда производства БФЛ
+(из `research/07-hiring-lens.md`)
+
+- [S1] hh.ru, вакансия 136608846 «Руководитель продукта / CEO направления», Match Makers Staffing, 25.08.2026 — https://hh.ru/vacancy/136608846
+- [S2] hh.ru, вакансия 132043828 «Руководитель отдела продаж (B2B)», 11.04.2026, 150–360 тыс. ₽, «ТД или ГПХ» — https://hh.ru/vacancy/132043828 (см. `docs/research/01-company.md`)
+- [S2a] dreamjob.ru, работодатель 266046 «САУ Правильный выбор»: 64 отзыва, 4,1; зарплаты; отзыв юриста (август 2026) — https://dreamjob.ru/employers/266046
+- [S3] Хабр, «Сколько зарабатывают Продакт Менеджеры в 2026?» — https://habr.com/ru/articles/1020324/
+- [S4] Хабр, «Карьерный анализ: CPO в российском финтехе, 2025–2026», 24.02.2026 — https://habr.com/ru/articles/1002804/
+- [S5] Хабр / Хабр Карьера, «Зарплаты IT-специалистов в первой половине 2026 года: рост ниже инфляции», 21.07.2026 — https://habr.com/ru/specials/1060148/
+- [S6] Хабр Карьера, калькулятор зарплат «Менеджер продукта» (765 анкет) — https://career.habr.com/salaries?qualification=All&spec_aliases%5B%5D=product_manager
+- [S7] ProductStar, «Зарплата топ-менеджеров в России в 2025 году», 03.07.2025 — https://productstar.ru/blog/zarplata-top-menedzherov-v-rossii-v-2025-godu
+- [S8] h.careers, «Product менеджер (Legal) в Сбер», 29.05.2026 — https://h.careers/job/c5f2dcf6-c008-439d-ae25-45ed54b87233
+- [S9] hh.ru, поиск «руководитель направления B2B», Москва, только с зарплатой, выдача 08.09.2026 — https://hh.ru/search/vacancy?text=руководитель+направления+B2B&area=1&search_field=name&only_with_salary=true
+- [S10] hh.ru, поиск «директор по продукту», Москва, только с зарплатой, выдача 08.09.2026 — https://hh.ru/search/vacancy?text=директор+по+продукту&area=1&search_field=name&only_with_salary=true
+- [S11] Право.ру / HH.ru, «Самые высокооплачиваемые вакансии октября в юридической отрасли» (директор юрдепартамента от 400 тыс.; год публикации не установлен) — https://300.pravo.ru/story/236279/
+- [S12] РБК Компании, «Топ-менеджеры в 2026 году: конкуренция растёт» (hh-индекс 30,7 в «Высшем и среднем менеджменте», май 2026; общий 9,1; цифры из поисковой выдачи, страница вернула 403) — https://companies.rbc.ru/news/eA33oe5Ksr/top-menedzheryi-v-2026-godu-konkurentsiya-rastet/
+- [S12a] Get Experts, «Обзор рынка труда и заработных плат 2025–2026» (опрос сентябрь–октябрь 2025, 5 453 респондента; вакансий −30 %) — https://getexperts.ru/research/obzor-rynka-truda-i-zarabotnyh-plat-v-rossii-2025-26/
+- [S12b] CNews, «Get Experts: в 2026 г. зарплаты повысят 48 % работодателей», 27.11.2025 — https://www.cnews.ru/news/line/2025-11-27_get_experts_v_2026_gzarplaty_povysyat
+- [S13] hh.ru, работодатель 10895304 Match Makers Staffing (8 вакансий, 5,0 / 2 отзыва) — https://hh.ru/employer/10895304
+- [S14] Сайт агентства Match Makers Staffing — https://matchmakersstaffing.ru/
+- [S15] rounds.ru, «ESOP и опционы для команды в России», 03.07.2026 (пул 10–15 %, вестинг 4 года / клифф 1 год, фантомы «чаще всего из-за простоты», налоговый пример) — https://rounds.ru/guides/esop-i-opciony-dlya-komandy-v-rossii
+- [S16] acenter.ru, «О долгосрочной мотивации российских компаний» (данные Ward Howell, 2011–2012: фантомы ~40 %, cash LTI 31 %, доля LTI в доходе CEO 25 %) — https://acenter.ru/article/o-dolgosrochnoi-motivatsii-rossiiskikh-kompanii
+- [S17] abp.legal, «Долгосрочная мотивация: фантомные опционы» (триггеры, база «% чистых активов», НДФЛ 13–22 %, взносы 30/15/7,6 %) — https://abp.legal/motivatsionnye-programmy-i-optsiony
+- [S18] Buzko Krasnov, «Всё об опционных программах для сотрудников в России», 28.09.2020 (вестинг 25 %/год, good/bad leaver, корпоративный договор) — https://www.buzko.legal/content-ru/vse-ob-opcionnyh-programmah-dlya-sotrudnikov-v-rossii
+- [S18a] Пример «гендиректор, финдиректор и разработчик — по 10 % каждый» — из поисковой выдачи по опционным программам в ООО; первоисточник — одна из двух статей: Buzko Krasnov «Как распределить опционный пул в ООО?» — https://www.buzko.legal/content-ru/kak-raspredelit-opcionnyy-pul-v-ooo или Клерк.ру «Опционная программа… (вестинг) в России» — https://www.klerk.ru/user/2056363/611620/ (страницы целиком не прочитаны)
+- [S19] RB.RU, «KPI, бонусы и компенсации: зачем нужен договор с генеральным директором», 10.08.2020 (EBITDA-бонус, good leaver 6 окладов, bad leaver ≥ 3) — https://rb.ru/columns/dogovor-s-generalnym/
+- [S19a] vc.ru, «KPI генерального директора: как рассчитать вознаграждение?» (пример (22 − 20 млн) × 15 %) — https://vc.ru/hr/212814-kpi-generalnogo-direktora-kak-rasschitat-voznagrazhdenie
+- [S19b] probusiness.io, «Как рассчитать мотивацию менеджеров и процент от прибыли» (премия 20–30 % прибыли; ФОТ ≤ 40 % валовой прибыли) — https://probusiness.io/management/9080-skolko-procentov-ot-prodazh-platit-menedzheram-chtoby-oni-byli-dovolny-no-ne-seli-pribyl-keys-raschety.html
+- [S20] ГородРабот.ру, «Зарплата юриста в Уфе за 2026 год» (август 2026: средняя 69 592, медиана 60 000, мода 50 000; «юрист по банкротству» 55 000; старший 80–100 тыс.) — https://ufa.gorodrabot.ru/salaries/yurist
+- [S21] ГородРабот.ру, «Зарплата юриста в Москве за 2026» (средняя 113 257) и «старшего юриста» (147 106) — https://moskva.gorodrabot.ru/salaries/yurist ; https://moskva.gorodrabot.ru/salaries/yurist-starshiy
+- [S22] hh.ru, поиск «юрист банкротство физических лиц», Уфа (area 99), выдача 08.09.2026 — https://hh.ru/search/vacancy?text=юрист+банкротство+физических+лиц&area=99&search_field=name
+- [S23] hh.ru, поиск «юрист банкротство физических лиц», Москва (area 1), выдача 08.09.2026 (6 вакансий) — https://hh.ru/search/vacancy?text=юрист+банкротство+физических+лиц&area=1&search_field=name
+- [S24] hh.ru, вакансия 135522056 «Юрист по банкротству», ООО ЦПФ, Москва, 120–150 тыс. (архив 22.08.2026) — https://hh.ru/vacancy/135522056
+- [S24a] hh.ru, вакансия 131404586 «Помощник юриста (БФЛ)», ЦФС, удалённо, 40–45 тыс. (архив 19.04.2026) — https://hh.ru/vacancy/131404586
+- [S24b] hh.ru, вакансия 129205533 «Помощник арбитражного управляющего», Лигал Арбитр, Москва, 100–140 тыс. (архив 05.02.2026) — https://hh.ru/vacancy/129205533
+- [S25] hh.ru, поиск «руководитель отдела банкротства», Россия, выдача 08.09.2026 (14 вакансий) — https://hh.ru/search/vacancy?text=руководитель+отдела+банкротства&area=113&search_field=name
+- [S26] hh.ru, поиск «помощник юриста банкротство», Уфа, выдача 08.09.2026 — https://hh.ru/search/vacancy?text=помощник+юриста+банкротство&area=99
+- [S26a] Работа.ру, «Юрист по банкротству: средняя зарплата» (37 тыс.; 25–121 тыс.; дата не указана) — https://www.rabota.ru/career/catalogue/justice/bankruptcy-lawyer/
+- [S27] hh.ru, поиск «помощник арбитражного управляющего», Россия, выдача 08.09.2026 (98 вакансий) — https://hh.ru/search/vacancy?text=помощник+арбитражного+управляющего&area=113&search_field=name
+- [S28] hh.ru, поиск «менеджер по сопровождению банкротство», Уфа, выдача 08.09.2026 — https://hh.ru/search/vacancy?text=менеджер+по+сопровождению+банкротство&area=99
+- [S29] Antal Talent, «Текучесть персонала в компаниях в России по итогам 2025 года» (опрос 17.02–20.03.2026, 194 компании) — https://antaltalent.ru/news/tekuchest-personala-v-kompaniyah-v-rossii-po-itogam-2025-goda/
+- [S29a] pravo.tech, «Арбитражный управляющий в 2026 году…» (в среднем 33 дела на АУ) — https://pravo.tech/blog/article/arbitrazhnyj-upravlyayushhij-v-2026-godu-pochemu-tablicz-i-kalendarya-uzhe-nedostatochno
+- [S29b] Оценка «~30 % в год по РФ при комфортных 15–20 %» — из поисковой выдачи (вторичные HR-блоги): konsol.pro — https://konsol.pro/blog/tekuchest-personala-chto-eto-kak-rasschitat ; hrtime.ru — https://hrtime.ru/contents/tekuchest-personala-normy-po-otrasliam-i-dolzhnostiam-koeffitsient-tekuchesti-kadrov-formula/ (страницы целиком не прочитаны)
+- [S30] КонсультантПлюс, ст. 20.6 127-ФЗ «Вознаграждение арбитражного управляющего» — https://www.consultant.ru/document/cons_doc_LAW_39331/c8ec6bf405a2188b82fd140eeb53aa465745c8bd/
+- [S30a] Право.ру, «Банкротный дайджест за май: зарубежные активы и индексация вознаграждения», 06.06.2025 (законопроект: ФУ 40 000 / 60 000 ₽) — https://pravo.ru/story/258638/
+- [S31] КонсультантПлюс, ст. 213.9 127-ФЗ «Финансовый управляющий» (п. 6 — привлечение лиц по определению суда) — https://www.consultant.ru/document/cons_doc_LAW_39331/2029e44a562dd1c765303f50570fe5a46c86fe63/
+- [S32] КонсультантПлюс, Постановление Пленума ВС РФ от 13.10.2015 № 45 (ред. 17.12.2024), п. 19–21 — https://www.consultant.ru/document/cons_doc_LAW_187354/
+- [S33] rusbankrot.ru, «В каких случаях суды считают необоснованным привлечение управляющим специалистов?», 26.09.2023 — https://rusbankrot.ru/people/v-kakikh-sluchayakh-sudy-schitayut-neobosnovannym-privlechenie-upravlyayushchim-spetsialistov/
+- [S34] dolgam.net, «Финансовый (арбитражный) управляющий при банкротстве физических лиц» (позиция юрфирмы о доплатах, заинтересованности, санкциях) — https://dolgam.net/articles/bankrotstvo-fizicheskih-lic/finansovyj-arbitrazhnyj-upravlyayushij/
+- [S35] temofeev.com, «Сборник тестовых заданий для Product Manager» — https://temofeev.com/info/articles/sbornik-testovykh-zadaniy-dlya-product-manager/
+- [S36] Хабр, «Небольшой сборник кейсов с собеседований для Product Manager» — https://habr.com/ru/articles/865864/
+- [S37] vc.ru, «Тестовые задания на Product Manager, которые принесли офферы в Яндекс, VK…», 04.04.2023 — https://vc.ru/hr/655608-testovye-zadaniya-na-product-manager-kotorye-prinesli-offery-v-yandeks-vk-i-v-drugie-it-kompanii
+- [S38] Human Agency, вакансия Entrepreneur in Residence (требования к «доказательству shipping», критерии оценки) — https://job-boards.greenhouse.io/humanagency/jobs/7657879003
+- [S39] hh.ru, «Красные флаги при поиске работы: как не должно проходить собеседование», 09.08.2024 — https://hh.ru/article/32005
+- [S40] Yale SOM Insights, «Startup founders are at a disadvantage when applying for jobs», 13.07.2022 (исследование Botelho) — https://insights.som.yale.edu/insights/startup-founders-are-at-disadvantage-when-applying-for-jobs
+- [S41] Fortune, «Entrepreneurs face hiring bias…», 12.05.2024 — https://fortune.com/2024/05/12/entrepreneur-founder-startup-hiring-interview-bias-recruiter-jobs
+- Внутренние: `docs/PLAN.md` (разделы 3.2, 3.3, 7, 9, 12), `docs/research/01-company.md`, `docs/research/04-business-models.md`.
+
+**Не найдено (искали):** публичные вилки CPO в legaltech РФ; отраслевые нормы нагрузки юриста/помощника по БФЛ; текучесть в юруслугах; статус законопроекта о 40/60 тыс. ₽ на осень 2026; размеры фантомных опционов «руководителя направления» в российских непубличных компаниях (публикуются механики, не проценты); ИНН/юрлицо агентства Match Makers Staffing.
 
